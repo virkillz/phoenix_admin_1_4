@@ -59,11 +59,13 @@
                           <div class="btn-group mr-1 mb-1">
                           <%%= link "Show", to: Routes.<%= schema.route_helper %>_path(@conn, :show, <%= schema.singular %>), class: "btn btn-primary" %>
                           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          </button>        
-                          <div class="dropdown-divider"></div>
-                          <%%= link "Edit", to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "dropdown-item" %>
-                          <%%= link "Delete", to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "dropdown-item" %>
-                           </div> 
+                          </button> 
+                             <div class="dropdown-menu">    
+                            <%%= link "Edit", to: Routes.<%= schema.route_helper %>_path(@conn, :edit, <%= schema.singular %>), class: "dropdown-item" %>
+                            <div class="dropdown-divider"></div>                    
+                            <%%= link "Delete", to: Routes.<%= schema.route_helper %>_path(@conn, :delete, <%= schema.singular %>), method: :delete, data: [confirm: "Are you sure?"], class: "dropdown-item" %>
+                             </div> 
+                         </div>
                         </td>
                       </tr>
                   <%% end %>

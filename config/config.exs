@@ -22,6 +22,18 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+
+# Configures Guardian
+config :phoenix_admin, PhoenixAdmin.Auth.Guardian,
+  issuer: "phoenix_admin",
+  secret_key: "6FqTTEtPxCWf1Tc/JVjS/SRKE/e2a7JUi2GZynIHGhWZdgD49qzttvHQlEO93HLh"
+
+config :phoenix_admin, PhoenixAdmin.Auth.AuthAccessPipeline,
+  module: PhoenixAdmin.Auth.Guardian,
+  error_handler: PhoenixAdmin.Auth.AuthErrorHandler
+
+
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 

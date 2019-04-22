@@ -1,0 +1,115 @@
+<!-- BEGIN: Content-->
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-wrapper-before"></div>
+    <div class="content-header row">
+      <div class="content-header-left col-md-4 col-12 mb-2">
+        <h3 class="content-header-title">Show Admin</h3>
+      </div>
+      <div class="content-header-right col-md-8 col-12">
+        <div class="breadcrumbs-top float-md-right">
+          <div class="breadcrumb-wrapper mr-1">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item"><a href="#">Admins</a>
+              </li>
+              <li class="breadcrumb-item active">Show Admin
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-body">
+      <div class="row justify-content-md-center">
+        <div class=" col-xl-8 col-lg-8 col-md-10">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Show Admin</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                <ul class="list-inline mb-0">
+                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  <li><a data-action="close"><i class="ft-x"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-content collapse show">
+              <div class="card-body">
+				
+				<!-- Fill this-->
+
+		<ul>
+		
+		  <li>
+		    <strong>Username:</strong>
+		    <%= @admin.username %>
+		  </li>
+		
+		  <li>
+		    <strong>Email:</strong>
+		    <%= @admin.email %>
+		  </li>
+		
+		  <li>
+		    <strong>Password hash:</strong>
+		    <%= @admin.password_hash %>
+		  </li>
+		
+		  <li>
+		    <strong>Full name:</strong>
+		    <%= @admin.full_name %>
+		  </li>
+		
+		  <li>
+		    <strong>Phone number:</strong>
+		    <%= @admin.phone_number %>
+		  </li>
+		
+		  <li>
+		    <strong>Location:</strong>
+		    <%= @admin.location %>
+		  </li>
+		
+		  <li>
+		    <strong>Is active:</strong>
+		    <%= @admin.is_active %>
+		  </li>
+		
+		  <li>
+		    <strong>Bio:</strong>
+		    <%= @admin.bio %>
+		  </li>
+		
+		  <li>
+		    <strong>Ip:</strong>
+		    <%= @admin.ip %>
+		  </li>
+		
+		  <li>
+		    <strong>Last login:</strong>
+		    <%= @admin.last_login %>
+		  </li>
+		
+		</ul>
+
+<span><%= link "Edit", to: Routes.admin_path(@conn, :edit, @admin), class: "btn" %></span>
+<span><%= link "Back", to: Routes.admin_path(@conn, :index), class: "btn btn-bg-gradient-x-red-pink" %></span>
+
+				<!-- END: Fill this-->
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: Content-->
+

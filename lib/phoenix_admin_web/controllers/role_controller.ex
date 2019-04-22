@@ -5,6 +5,7 @@ defmodule PhoenixAdminWeb.RoleController do
   alias PhoenixAdmin.Account.Role
 
   def index(conn, _params) do
+    IO.inspect(conn)
     roles = Account.list_roles()
     render(conn, "index.html", roles: roles)
   end

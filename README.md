@@ -1,20 +1,20 @@
 # PhoenixAdmin
 
+This is customized version of Phoenix. Ready to launch any admin portal in minutes.
+
+Compatible with Phoenix 1.4 and Elixir 1.7
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
+  * Check your database setting at `config/dev.exs` and match your postgresql credential
+  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `cd assets && npm install`
+  * Run seed `mix run priv/repo/seeds.exs` (if you are from asset folder, dont forget to back to root project folder `cd ..`)
   * Start Phoenix endpoint with `mix phx.server`
+  * Login with username 'admin' and passsword 'admin'
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+If you want to generate HTML, you should use `mix custom.gen.html` instead of `mix phx.gen.html`

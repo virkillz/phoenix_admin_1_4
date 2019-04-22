@@ -47,7 +47,7 @@ defmodule PhoenixAdmin.MixProject do
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.0"},
       {:bcrypt_elixir, "~> 1.0"},
-      {:timex, "~> 3.0"}      
+      {:timex, "~> 3.0"}
 
     ]
   end

@@ -8,7 +8,8 @@ defmodule PhoenixAdminWeb.Plugs.SetCurrentAdmin do
   end
 
   def call(conn, _params) do
-    user_id = Plug.Conn.get_session(conn, :current_admin_id)
+    IO.inspect(Plug.Conn.get_session(conn))
+    user_id = Plug.Conn.get_session(conn, :current_admin_id) |> IO.inspect()
 
     cond do
       current_user = user_id && Repo.get(Admin, user_id) ->

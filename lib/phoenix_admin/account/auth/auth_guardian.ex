@@ -1,10 +1,8 @@
 defmodule PhoenixAdmin.Auth.Guardian do
   @moduledoc false
 
-
   use Guardian, otp_app: :phoenix_admin
   import Ecto.Query, warn: false
-
 
   alias PhoenixAdmin.Auth.Guardian
   alias PhoenixAdmin.Account
@@ -30,5 +28,4 @@ defmodule PhoenixAdmin.Auth.Guardian do
     conn
     |> Guardian.Plug.sign_out()
   end
-
 end

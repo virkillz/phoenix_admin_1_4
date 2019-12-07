@@ -1,4 +1,5 @@
 <%%= form_for @changeset, @action, [class: "form form-horizontal"], fn f -> %>
+<div class="card-body">
   <%%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
@@ -12,16 +13,15 @@
     </div>
     <div class="col-md-9">
     <%= input %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error %>
-    </div>                  
+    <span class="help-block"><%= error %></span>
+    </div>                                                     
   </div>
 
 
 <% end %>
-  <div>
-    <%%= submit "Save", [class: "btn btn-bg-gradient-x-red-pink"] %>
-<span><%%= link "Back", to: Routes.role_path(@conn, :index), class: "btn" %></span>     
+</div>
+  <div class="card-footer">
+    <%%= submit "Save", [class: "btn btn-primary"] %>
+<span><%%= link "Back", to: Routes.role_path(@conn, :index), class: "btn btn-warning" %></span>     
   </div>
 <%% end %>

@@ -1,59 +1,24 @@
-<!-- BEGIN: Content-->
-<div class="app-content content">
-  <div class="content-wrapper">
-    <div class="content-wrapper-before"></div>
-    <div class="content-header row">
-      <div class="content-header-left col-md-4 col-12 mb-2">
-        <h3 class="content-header-title">Edit <%= schema.human_singular %></h3>
-      </div>
-      <div class="content-header-right col-md-8 col-12">
-        <div class="breadcrumbs-top float-md-right">
-          <div class="breadcrumb-wrapper mr-1">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a>
-              </li>
-              <li class="breadcrumb-item"><a href="#"><%= schema.human_plural %></a>
-              </li>
-              <li class="breadcrumb-item active">Edit <%= schema.human_singular %>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-body">
-      <div class="row justify-content-md-center">
-        <div class=" col-xl-8 col-lg-8 col-md-10">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">Edit <%= schema.human_singular %></h4>
-              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-              <div class="heading-elements">
-                <ul class="list-inline mb-0">
-                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                  <li><a data-action="close"><i class="ft-x"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-content collapse show">
-              <div class="card-body">
-				
-				<!-- Fill this-->
-
-				<%%= render "form.html", Map.put(assigns, :action, Routes.<%= schema.route_helper %>_path(@conn, :update, @<%= schema.singular %>)) %>
-
-				<!-- END: Fill this-->
 
 
-              </div>
+<!-- Breadcrumb-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Home</li>
+  <li class="breadcrumb-item">
+    <a href="/<%= schema.human_plural %>"><%= schema.human_plural %></a>
+  </li>
+  <li class="breadcrumb-item active">Edit</li>
+</ol>
 
-            </div>
-          </div>
+<div class="container-fluid">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header"><strong>Edit</strong> <%= schema.human_singular %></div>
+
+        				<%%= render "form.html", Map.put(assigns, :action, Routes.<%= schema.route_helper %>_path(@conn, :update, @<%= schema.singular %>)) %>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- END: Content-->
+</div

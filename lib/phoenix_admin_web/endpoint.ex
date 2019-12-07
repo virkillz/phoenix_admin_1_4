@@ -13,7 +13,7 @@ defmodule PhoenixAdminWeb.Endpoint do
     at: "/",
     from: :phoenix_admin,
     gzip: false,
-    only: ~w(css fonts app-assets assets images js favicon.ico robots.txt)
+    only: ~w(css fonts dist app-assets assets images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

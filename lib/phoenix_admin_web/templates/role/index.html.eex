@@ -1,4 +1,4 @@
-<!-- BEGIN: Content-->
+<!-- BEGIN:
 <div class="app-content content">
   <div class="content-wrapper">
     <div class="content-wrapper-before"></div>
@@ -91,7 +91,80 @@
     </div>
   </div>
 </div>
-<!-- END: Content-->
+ Content-->
+
+
+
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">
+            <a href="#">Roles</a>
+          </li>
+          <li class="breadcrumb-item active">List</li>
+
+        </ol>
+
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-lg-12">
+
+                <div class="card">
+                  <div class="card-header">
+                     Roles List
+                     <div class="card-header-actions" >
+                        <a href="/roles/new">
+                        <button class="btn btn-sm btn-primary"><i class="fa fa-plus mr-2"></i> New</button>
+                        </a>
+                      </div>
+                    </div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm">
+                      <thead>
+                      <tr>
+                        <th>ID</th>                        
+                        <th>Name</th>
+                        <th>Description</th>
+
+                        <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                    <%= for role <- @roles do %>
+                        <tr>
+                          <td><%= role.id %></td>                          
+                          <td><%= role.name %></td>
+                          <td><%= role.description %></td>
+
+                          <td>
+                            <div class="btn-group mr-1 mb-1">
+
+                                <%= link "Show", to: Routes.role_path(@conn, :show, role), class: "btn btn-primary" %>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <%= link "Edit", to: Routes.role_path(@conn, :edit, role), class: "dropdown-item" %>
+                                    <div class="dropdown-divider"></div>
+                            <%= link "Delete", to: Routes.role_path(@conn, :delete, role), method: :delete, data: [confirm: "Are you sure?"], class: "dropdown-item" %>                                    
+                                </div>
+                            </div>                            
+                            
+                          </td>
+                        </tr>
+                    <% end %>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+      </div>
+        </div>
+
 
 
 

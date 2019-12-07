@@ -1,153 +1,169 @@
-    <div class="app-content content">
-      <div class="content-wrapper">
-        <div class="content-wrapper-before"></div>
-        <div class="content-header row">
-        </div>
-        <div class="content-body"><!-- Revenue, Hit Rate & Deals -->
-<div class="row">
-    <div class="col-lg-8 col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Project Revenue</h4>
-                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                    <ul class="list-inline mb-0">
-                        <li><button type="button" class="btn btn-glow btn-round btn-bg-gradient-x-red-pink">More</button></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card-content collapse show">
-                <div class="card-body p-0 pb-0">
-                    <div class="chartist">
-                        <div id="project-stats" class="height-350 areaGradientShadow1"></div>
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-primary">
+                  <div class="card-body pb-0">
+                    <div class="btn-group float-right">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-settings"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
                     </div>
+                    <div class="text-value">9.823</div>
+                    <div>Members online</div>
+                  </div>
+                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas class="chart chartjs-render-monitor" id="card-chart1" height="140" style="display: block; height: 70px; width: 239px;" width="478"></canvas>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-12">
-        <div class="row">
-            <div class="col-12">
-                <div class="card pull-up">
-                    <div class="card-header">
-                        <h4 class="card-title float-left">Project X</h4><a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                        <span class="badge badge-pill badge-info float-right m-0">In Progress</span>
+              </div>
+              <!-- /.col-->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-info">
+                  <div class="card-body pb-0">
+                    <button class="btn btn-transparent p-0 float-right" type="button">
+                      <i class="icon-location-pin"></i>
+                    </button>
+                    <div class="text-value">9.823</div>
+                    <div>Members online</div>
+                  </div>
+                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas class="chart chartjs-render-monitor" id="card-chart2" height="140" width="478" style="display: block; height: 70px; width: 239px;"></canvas>
+                  <div id="card-chart2-tooltip" class="chartjs-tooltip bottom" style="opacity: 0; left: 85.4399px; top: 138.019px;"><div class="tooltip-header"><div class="tooltip-header-item">January</div></div><div class="tooltip-body"><div class="tooltip-body-item"><span class="tooltip-body-item-color" style="background-color: rgba(255, 255, 255, 0.55);"></span><span class="tooltip-body-item-label">My First dataset</span><span class="tooltip-body-item-value">1</span></div></div></div></div>
+                </div>
+              </div>
+              <!-- /.col-->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-warning">
+                  <div class="card-body pb-0">
+                    <div class="btn-group float-right">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-settings"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
                     </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body pt-0 pb-1">
-                            <h6 class="text-muted font-small-3"> Completed Task : 4/10</h6>
-                            <div class="progress progress-sm mt-1 mb-0 box-shadow-2">
-                                <div class="progress-bar bg-gradient-x-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="media d-flex">
-                                <div class="align-self-center">
-                                    <h6 class="text-bold-600 mt-2"> Client: <span class="info">Xeon Inc.</span></h6>
-                                    <h6 class="text-bold-600 mt-1"> Deadline: <span class="blue-grey">5th June, 2018</span></h6>
-                                </div>
-                                <div class="media-body text-right mt-2">
-                                    <ul class="list-unstyled users-list">
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="John Doe" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-19.png" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Katherine Nichols" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-18.png" alt="Avatar">
-                                        </li>
-                                        <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Joseph Weaver" class="avatar avatar-sm pull-up">
-                                            <img class="media-object rounded-circle" src="app-assets/images/portrait/small/avatar-s-17.png" alt="Avatar">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="text-value">9.823</div>
+                    <div>Members online</div>
+                  </div>
+                  <div class="chart-wrapper mt-3" style="height:70px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas class="chart chartjs-render-monitor" id="card-chart3" height="140" width="542" style="display: block; height: 70px; width: 271px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-danger">
+                  <div class="card-body pb-0">
+                    <div class="btn-group float-right">
+                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-settings"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
                     </div>
+                    <div class="text-value">9.823</div>
+                    <div>Members online</div>
+                  </div>
+                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas class="chart chartjs-render-monitor" id="card-chart4" height="140" width="478" style="display: block; height: 70px; width: 239px;"></canvas>
+                  </div>
                 </div>
+              </div>
+              <!-- /.col-->
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card pull-up bg-gradient-directional-danger">
-                    <div class="card-header bg-hexagons-danger">
-                        <h4 class="card-title white">Analytics</h4>
-                        <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                        <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li>
-                                    <a class="btn btn-sm btn-white danger box-shadow-1 round btn-min-width pull-right" href="#" target="_blank">Report <i class="ft-bar-chart pl-1"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+            <!-- /.row-->
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <h4 class="card-title mb-0">Traffic</h4>
+                    <div class="small text-muted">November 2017</div>
+                  </div>
+                  <!-- /.col-->
+                  <div class="col-sm-7 d-none d-md-block">
+                    <button class="btn btn-primary float-right" type="button">
+                      <i class="icon-cloud-download"></i>
+                    </button>
+                    <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary">
+                        <input id="option1" type="radio" name="options" autocomplete="off"> Day
+                      </label>
+                      <label class="btn btn-outline-secondary active">
+                        <input id="option2" type="radio" name="options" autocomplete="off" checked=""> Month
+                      </label>
+                      <label class="btn btn-outline-secondary">
+                        <input id="option3" type="radio" name="options" autocomplete="off"> Year
+                      </label>
                     </div>
-                    <div class="card-content collapse show bg-hexagons-danger">
-                        <div class="card-body">
-                            <div class="media d-flex">
-                                <div class="align-self-center width-100">
-                                    <div id="Analytics-donut-chart" class="height-100 donutShadow"></div>
-                                </div>
-                                <div class="media-body text-right mt-1">
-                                    <h3 class="font-large-2 white">12,515</h3>
-                                    <h6 class="mt-1"><span class="text-muted white">Analytics in the <a href="#" class="darken-2 white">last year.</a></span></h6>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                  <!-- /.col-->
+                </div>
+                <!-- /.row-->
+                <div class="chart-wrapper" style="height:300px;margin-top:40px;"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                  <canvas class="chart chartjs-render-monitor" id="main-chart" height="600" width="2276" style="display: block; height: 300px; width: 1138px;"></canvas>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="row text-center">
+                  <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                    <div class="text-muted">Visits</div>
+                    <strong>29.703 Users (40%)</strong>
+                    <div class="progress progress-xs mt-2">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ Revenue, Hit Rate & Deals -->
-<!-- Emails Products & Avg Deals -->
-<div class="row">
-    <div class="col-md-12 col-lg-8">
-        <div class="card">
-            <div class="card-header p-1">
-                <h4 class="card-title float-left">Project X - <span class="blue-grey lighten-2 font-small-3 mb-0">24 DEC 2017 - 09 APR 2019</span></h4>
-                <span class="badge badge-pill badge-info float-right m-0">Approved</span>
-            </div>
-            <div class="card-content collapse show">
-                <div class="card-footer text-center p-1">
-                    <div class="row">
-                        <div class="col-md-3 col-12 border-right-blue-grey border-right-lighten-5 text-center">
-                            <p class="blue-grey lighten-2 mb-0">Tasks</p>
-                            <p class="font-medium-5 text-bold-400">26</p>
-                        </div>
-                        <div class="col-md-3 col-12 border-right-blue-grey border-right-lighten-5 text-center">
-                            <p class="blue-grey lighten-2 mb-0">Completed</p>
-                            <p class="font-medium-5 text-bold-400">58%</p>
-                        </div>
-                        <div class="col-md-3 col-12 border-right-blue-grey border-right-lighten-5 text-center">
-                            <p class="blue-grey lighten-2 mb-0">Pending</p>
-                            <p class="font-medium-5 text-bold-400">42%</p>
-                        </div>
-                        <div class="col-md-3 col-12 text-center">
-                            <p class="blue-grey lighten-2 mb-0">Version</p>
-                            <p class="font-medium-5 text-bold-400">4.5</p>
-                        </div>
+                  </div>
+                  <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                    <div class="text-muted">Unique</div>
+                    <strong>24.093 Users (20%)</strong>
+                    <div class="progress progress-xs mt-2">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <hr>
-                    <span class="text-muted"><a href="#" class="danger darken-2">Project X</a> Statistics</span>
+                  </div>
+                  <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                    <div class="text-muted">Pageviews</div>
+                    <strong>78.706 Views (60%)</strong>
+                    <div class="progress progress-xs mt-2">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                    <div class="text-muted">New Users</div>
+                    <strong>22.123 Users (80%)</strong>
+                    <div class="progress progress-xs mt-2">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                    <div class="text-muted">Bounce Rate</div>
+                    <strong>40.15%</strong>
+                    <div class="progress progress-xs mt-2">
+                      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="col-md-12 col-lg-4">
-        <div class="card pull-up border-top-info border-top-3 rounded-0">
-            <div class="card-header">
-                <h4 class="card-title">New Clients <span class="badge badge-pill badge-info float-right m-0">5+</span></h4>
-            </div>
-            <div class="card-content collapse show">
-                <div class="card-body p-1">
-                    <h4 class="font-large-1 text-bold-400">18.5% <i class="ft-users float-right"></i></h4>
-                </div>
-                <div class="card-footer p-1">
-                    <span class="text-muted"><i class="la la-arrow-circle-o-up info"></i> 23.67% increase</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ Emails Products & Avg Deals -->
 
+
+          </div>
         </div>
-      </div>
-    </div>

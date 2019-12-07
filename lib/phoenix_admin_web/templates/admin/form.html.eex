@@ -1,142 +1,108 @@
-<%= form_for @changeset, @action, [class: "form form-horizontal"], fn f -> %>
+
+  <%= form_for @changeset, @action, [class: "form form-horizontal"], fn f -> %>
+  <div class="card-body">
   <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
+  <div class="alert alert-danger">
+    <p>Oops, something went wrong! Please check the errors below.</p>
+  </div>
   <% end %>
 
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
-      <%= label f, :username %>
+    <div class="col-md-3 col-form-label">
+      <%= label f, :username%>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :username %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :username %>
-    </div>                  
+      <%= text_input f, :username, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :username %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :email %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :email %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :email %>
-    </div>                  
+      <%= text_input f, :email, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :email %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :password %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :password %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :password %>
-    </div>                  
+      <%= text_input f, :password, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :password %></span>
+    </div>
   </div>
 
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, "Repeat Password" %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :repassword %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :repassword %>
-    </div>                  
+      <%= text_input f, :repassword, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :repassword %></span>
+    </div>
   </div>
 
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :full_name %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :full_name %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :full_name %>
-    </div>                  
+      <%= text_input f, :full_name, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :full_name %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :phone_number %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :phone_number %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :phone_number %>
-    </div>                  
+      <%= text_input f, :phone_number, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :phone_number %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :location %>
     </div>
     <div class="col-md-9">
-    <%= text_input f, :location %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :location %>
-    </div>                  
+      <%= text_input f, :location, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :location %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :is_active %>
     </div>
     <div class="col-md-9">
-    <%= checkbox f, :is_active %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :is_active %>
-    </div>                  
+      <%= checkbox f, :is_active, [class: "form-control"] %>
+      <span class="help-block"><%= error_tag f, :is_active %></span>
+    </div>
   </div>
 
-
-
-
   <div class="form-group row">
-    <div class="col-md-3 label-control" >
+    <div class="col-md-3 label-control">
       <%= label f, :bio %>
     </div>
     <div class="col-md-9">
-    <%= textarea f, :bio %>
-    </div>                                    
-    <div class="invalid-feedback">
-    <%= error_tag f, :bio %>
-    </div>                  
+      <%= textarea f, :bio, [class: "form-control", rows: "9"] %>
+      <span class="help-block"><%= error_tag f, :bio %></span>
+    </div>
   </div>
+</div>
+<div class="card-footer">
+  <%= submit "Save", [class: "btn btn-primary"] %>
+  <span class="ml-2"
+    ><%= link "Back", to: Routes.admin_path(@conn, :index), class: "btn
+    btn-warning" %></span
+  >
+</div>
 
-
-  <div>
-    <%= submit "Save", [class: "btn btn-bg-gradient-x-red-pink"] %>
-<span><%= link "Back", to: Routes.admin_path(@conn, :index), class: "btn" %></span>     
-  </div>
 <% end %>

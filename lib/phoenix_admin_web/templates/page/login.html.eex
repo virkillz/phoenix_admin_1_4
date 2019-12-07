@@ -6,7 +6,7 @@
               <div class="card-body">
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
-                <%= form_for @changeset, "/login", [class: "form-horizontal"], fn f -> %> 
+                <%= form_for @changeset, "/login", [class: "form-horizontal"], fn _f -> %> 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -62,63 +62,3 @@
         </div>
       </div>
     
-    
-    <!-- 
-    <div class="app-content content">
-      <div class="content-wrapper">
-        <div class="content-wrapper-before"></div>
-        <div class="content-header row">
-        </div>
-        <div class="content-body"><section class="flexbox-container">
-    <div class="col-12 d-flex align-items-center justify-content-center">
-        <div class="col-lg-4 col-md-6 col-10 box-shadow-2 p-0">
-            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
-                <div class="card-header border-0">
-                    <div class="text-center mb-1">
-                            <img src="/images/idkicon.png" alt="branding logo">
-                    </div>
-                    <div class="font-large-1  text-center">                       
-                        Admin Login
-                    </div>
-                </div>
-                <div class="card-content">
-                <p class="alert alert-success alert-dismissible fade in" role="alert"><%= get_flash(@conn, :info) %></p>
-                <p class="alert alert-danger alert-dismissible fade in" role="alert"><%= get_flash(@conn, :error) %></p>
-                <br>                   
-                    <div class="card-body">
-                    <%= form_for @changeset, "/login", [class: "form-horizontal"], fn f -> %>                             
-                            <fieldset class="form-group position-relative has-icon-left">
-                                <input type="text" class="form-control round" id="user-name" placeholder="Your Username" name="username" required>
-                                <div class="form-control-position">
-                                    <i class="ft-user"></i>
-                                </div>
-                            </fieldset>
-                            <fieldset class="form-group position-relative has-icon-left">
-                                <input type="password" class="form-control round" id="user-password" placeholder="Enter Password" name="password" required>
-                                <div class="form-control-position">
-                                    <i class="ft-lock"></i>
-                                </div>
-                            </fieldset>
-                            <div class="form-group row">
-                                <div class="col-md-6 col-12 text-center text-sm-left">
-                                   
-                                </div>
-                                <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="recover-password.html" class="card-link">Forgot Password?</a></div>
-                            </div>                           
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn round btn-block  btn-danger col-12 mr-1 mb-1">Login</button>    
-                            </div>
-                           
-                        <% end %>
-                    </div>
-                                     
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        </div>
-      </div>
-    </div>
-     END: Content-->
